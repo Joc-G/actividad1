@@ -1,0 +1,4 @@
+create procedure insertarPelicula(in titulo VARCHAR(255), in descrip TEXT, in salida_year YEAR(4), in lenguaje TINYINT(3), in leng_original TINYINT(3), in rentalDura TINYINT(3), in rentalRate DECIMAL(4,2), in lenght SMALLINT(5), in cost DECIMAL(5,2), in rating ENUM('G', 'PG', 'PG-13', 'R', 'NC-17'), in features SET('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes'), in last_update TIMESTAMP)
+
+INSERT INTO film (title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update) 
+VALUES (titulo, descrip, salida_year, lenguaje, leng_original, rentalDura, rentalRate, lenght, cost, rating, features, last_update)
